@@ -42,7 +42,8 @@
 //Main method function: Row display
 //NSIndexPath is a class that among other things has the row the user has selected
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"Cell";
+//    Cell must match the identifier you give to your cell in the storyboard: Select your cell -> go to the attributes inspector and set the cell Identifier to MyCell
+    static NSString *cellIdentifier = @"MyCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
@@ -51,17 +52,24 @@
        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-//    [[cell textLabel] setText:[_dataArray objectAtIndex: [indexPath row]]];
-    cell.textLabel.text = [_dataArray objectAtIndex:indexPath.row];
+    // here set all data in the cell ( you can use the default cell, or even create a personalised one )
+    //as we are using a default one:
+    [[cell textLabel] setText:[[self dataArray] objectAtIndex:[indexPath row] ]];
     
+     //now after running this, play with the Table view cell styles in the attributes inspector:
+     // choose between: Right Detail, Left Detail, Subtitle and add the following code:
+     // [[cell detailTextLabel] setText:@"jajjjaa"];
+     // run the code
+     
     return cell;
 }
 
+//show an alert when the user select a cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString* userSelected = [[self dataArray] objectAtIndex: [indexPath row]];
-    NSString* str = [[NSString alloc] initWithFormat:@"%@ Blogs",userSelected ];
+    NSString* selectedSubject = [[self dataArray] objectAtIndex: [indexPath row]];
+    NSString* str = [[NSString alloc] initWithFormat:@"You have selected %@ Blog",selectedSubject ];
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You've Selected" message:str preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Welcome" message:str preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"Ok!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"Dunno");
