@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3F70CF269DD06F0025F498 /* MultisectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3F70CE269DD06F0025F498 /* MultisectionTableViewController.m */; };
+		FA3F70D226A01B4E0025F498 /* MultisectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3F70D126A01B4E0025F498 /* MultisectionTableViewCell.m */; };
+		FA3F70D526A027D10025F498 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3F70D426A027D10025F498 /* Car.m */; };
 		FAD453FE24FA5BA60049136B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD453FD24FA5BA60049136B /* AppDelegate.m */; };
 		FAD4540124FA5BA60049136B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4540024FA5BA60049136B /* SceneDelegate.m */; };
 		FAD4540724FA5BA60049136B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4540524FA5BA60049136B /* Main.storyboard */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3F70CD269DD06F0025F498 /* MultisectionTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultisectionTableViewController.h; sourceTree = "<group>"; };
+		FA3F70CE269DD06F0025F498 /* MultisectionTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultisectionTableViewController.m; sourceTree = "<group>"; };
+		FA3F70D026A01B4E0025F498 /* MultisectionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultisectionTableViewCell.h; sourceTree = "<group>"; };
+		FA3F70D126A01B4E0025F498 /* MultisectionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultisectionTableViewCell.m; sourceTree = "<group>"; };
+		FA3F70D326A027D10025F498 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		FA3F70D426A027D10025F498 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		FAD453F924FA5BA60049136B /* iOSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD453FC24FA5BA60049136B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAD453FD24FA5BA60049136B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +51,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3F70D626A3D4990025F498 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4541524FA5F400049136B /* TableViewController.h */,
+				FAD4541624FA5F400049136B /* TableViewController.m */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		FA3F70D726A3D4B50025F498 /* sectionsIndexes */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F70CD269DD06F0025F498 /* MultisectionTableViewController.h */,
+				FA3F70CE269DD06F0025F498 /* MultisectionTableViewController.m */,
+				FA3F70D026A01B4E0025F498 /* MultisectionTableViewCell.h */,
+				FA3F70D126A01B4E0025F498 /* MultisectionTableViewCell.m */,
+				FA3F70D326A027D10025F498 /* Car.h */,
+				FA3F70D426A027D10025F498 /* Car.m */,
+			);
+			path = sectionsIndexes;
+			sourceTree = "<group>";
+		};
 		FAD453F024FA5BA60049136B = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +92,7 @@
 		FAD453FB24FA5BA60049136B /* iOSTableView */ = {
 			isa = PBXGroup;
 			children = (
+				FA3F70D726A3D4B50025F498 /* sectionsIndexes */,
 				FAD453FC24FA5BA60049136B /* AppDelegate.h */,
 				FAD453FD24FA5BA60049136B /* AppDelegate.m */,
 				FAD453FF24FA5BA60049136B /* SceneDelegate.h */,
@@ -70,8 +102,7 @@
 				FAD4540A24FA5BA70049136B /* LaunchScreen.storyboard */,
 				FAD4540D24FA5BA70049136B /* Info.plist */,
 				FAD4540E24FA5BA70049136B /* main.m */,
-				FAD4541524FA5F400049136B /* TableViewController.h */,
-				FAD4541624FA5F400049136B /* TableViewController.m */,
+				FA3F70D626A3D4990025F498 /* basic */,
 			);
 			path = iOSTableView;
 			sourceTree = "<group>";
@@ -102,7 +133,7 @@
 		FAD453F124FA5BA60049136B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = alex;
 				TargetAttributes = {
 					FAD453F824FA5BA60049136B = {
@@ -146,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3F70CF269DD06F0025F498 /* MultisectionTableViewController.m in Sources */,
 				FAD453FE24FA5BA60049136B /* AppDelegate.m in Sources */,
 				FAD4540F24FA5BA70049136B /* main.m in Sources */,
 				FAD4541724FA5F400049136B /* TableViewController.m in Sources */,
+				FA3F70D526A027D10025F498 /* Car.m in Sources */,
 				FAD4540124FA5BA60049136B /* SceneDelegate.m in Sources */,
+				FA3F70D226A01B4E0025F498 /* MultisectionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +235,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -259,6 +294,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
